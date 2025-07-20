@@ -16,3 +16,4 @@ AI-powered automation system that generates stock images (via Midjourney), tags 
 - Optional: n8n, ffmpeg, Whisper
 
 ## Setup
+1. Copy `.env.example` to `.env` and fill in your API keys and credentials.
