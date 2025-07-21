@@ -19,5 +19,5 @@ AI-powered automation system that generates stock images (via Midjourney), tags 
 1. Copy `.env.example` to `.env` and fill in your API keys and credentials.
 ##How to run 
 
-(venv) C:\Users\MasterIT\Downloads\AutoStockMint\backend>uvicorn app:app --relo BE
+(venv) C:\Users\MasterIT\Downloads\AutoStockMint\backend>uvicorn app:app --reload BE
 (venv) PS C:\Users\MasterIT\Downloads\AutoStockMint\frontend> npm start FE
