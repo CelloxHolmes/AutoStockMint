@@ -3,3 +3,5 @@ requests
 tk
 pillow
 python-dotenv
+fastapi
+uvicorn
