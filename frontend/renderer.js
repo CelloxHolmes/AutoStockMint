@@ -1,6 +1,8 @@
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('openSidebarBtn');
     sidebar.classList.toggle('hidden');
+    openBtn.classList.toggle('hidden');
 }
 
 function toggleDropdown() {
@@ -26,13 +28,3 @@ async function callAPI(path) {
     const json = await res.json();
     document.getElementById("result").innerText = json.message;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('toggleBtn');
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            const tabs = document.getElementById('sidebarTabs');
-            tabs.classList.toggle('hidden');
-        });
-    }
-});
