@@ -10,14 +10,14 @@
 <body class="bg-gray-900 text-white h-screen flex overflow-hidden">
 
 <!-- Sidebar -->
-<div id="sidebar" class="w-60 bg-gray-800 flex flex-col">
+<div id="sidebar" class="w-48 bg-gray-800 flex flex-col transition-all duration-300">
 
     <!-- Sidebar Header -->
     <div class="p-4 flex items-center justify-between border-b border-gray-700">
         <div class="text-xl font-bold flex items-center">
             <span class="mr-2">🎨</span> AutoStockMint
         </div>
-        <button onclick="toggleSidebarTabs()" class="text-white hover:text-gray-300">☰</button>
+        <button onclick="toggleSidebar()" class="text-white hover:text-gray-300">⏴</button>
     </div>
 
     <!-- Sidebar Tabs (toggle target) -->
@@ -34,7 +34,8 @@
 <div class="flex-1 flex flex-col">
 
     <!-- Header -->
-    <div class="flex items-center justify-end bg-gray-800 p-4 border-b border-gray-700">
+    <div class="flex items-center justify-between bg-gray-800 p-4 border-b border-gray-700">
+        <button id="openSidebarBtn" onclick="toggleSidebar()" class="text-white hover:text-gray-300 hidden">☰</button>
         <div class="relative">
             <button onclick="toggleDropdown()" class="bg-cyan-500 px-4 py-2 rounded">⚙️ Tools</button>
             <div id="dropdown" class="absolute right-0 mt-2 w-48 bg-gray-700 rounded hidden z-10">
@@ -83,9 +84,6 @@
         document.getElementById('dropdown').classList.toggle('hidden');
     }
 
-    function toggleSidebarTabs() {
-        document.getElementById('sidebarTabs').classList.toggle('hidden');
-    }
 
     function goToPage(page) {
         document.getElementById('mainPage').classList.add('hidden');
